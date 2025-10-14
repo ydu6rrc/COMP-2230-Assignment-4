@@ -8,11 +8,53 @@
   </head>
   <body>
     <form id="ninjaForm" action="https://httpbin.org/post" method="post">
+      <h1>Do You Believe Ninjas Exist?</h1>
+
       <label for="userName">Your Name:</label>
       <input type="text" id="userName" name="userName" />
 
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" />
+      <div>
+        <p><strong>Do you believe ninjas exist?</strong></p>
+        <label><input type="radio" name="ninjaExist" value="Yes" /> Yes</label>
+        <label><input type="radio" name="ninjaExist" value="No" /> No</label>
+      </div>
+
+      <div>
+        <p>
+          <strong
+            >What skills do you think are important for being a Ninja?</strong
+          >
+        </p>
+        <label
+          ><input type="checkbox" name="skills" value="Genjutsu" />
+          Genjutsu</label
+        >
+        <label
+          ><input type="checkbox" name="skills" value="Ninjutsu" />
+          Ninjutsu</label
+        >
+      </div>
+
+      <div>
+        <label for="origin">Where do you think ninjas came from?</label>
+        <select id="origin" name="origin">
+          <option value="guess">
+            You must guess it!!! btw I think it's easy!!
+          </option>
+          <option value="Japan">Japan</option>
+          <option value="China">China</option>
+          <option value="Korea">Korea</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" />
+      </div>
+
+      <div>
+        <input type="submit" value="Submit" />
+      </div>
     </form>
     <script src="script.js"></script>
   </body>
