@@ -7,88 +7,104 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form id="ninjaForm" action="https://httpbin.org/post" method="post">
+    <header>
       <h1>Do You Believe Ninjas Exist?</h1>
+    </header>
 
-      <fieldset>
-        <legend>Your name</legend>
-        <input
-          type="text"
-          id="userName"
-          name="userName"
-          placeholder="Enter your name"
-        />
-        <span class="error-message"></span>
-      </fieldset>
+    <main>
+      <form id="ninjaForm" action="https://httpbin.org/post" method="post">
+        <fieldset>
+          <legend>Your name</legend>
+          <label for="userName">Enter your name:</label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            placeholder="Enter your name"
+          />
+          <span class="error-message"></span>
+        </fieldset>
 
-      <fieldset>
-        <legend>Do you believe ninjas exist?</legend>
-        <input type="radio" id="ninjaYes" name="ninjaExist" value="Yes" />
-        <label for="ninjaYes">Yes</label>
+        <fieldset>
+          <legend>Do you believe ninjas exist?</legend>
+          <input type="radio" id="ninjaYes" name="ninjaExist" value="Yes" />
+          <label for="ninjaYes">Yes</label>
 
-        <input type="radio" id="ninjaNo" name="ninjaExist" value="No" />
-        <label for="ninjaNo">No</label>
+          <input type="radio" id="ninjaNo" name="ninjaExist" value="No" />
+          <label for="ninjaNo">No</label>
 
-        <span class="error-message"></span>
-      </fieldset>
+          <span class="error-message"></span>
+        </fieldset>
 
-      <fieldset>
-        <legend>
-          What skills do you think are important for being a Ninja?
-        </legend>
-        <input type="checkbox" id="skillGen" name="skills" value="Genjutsu" />
-        <label for="skillGen">Genjutsu</label>
+        <fieldset>
+          <legend>
+            What skills do you think are important for being a Ninja?
+          </legend>
+          <input type="checkbox" id="skillGen" name="skills" value="Genjutsu" />
+          <label for="skillGen">Genjutsu</label>
 
-        <input type="checkbox" id="skillNin" name="skills" value="Ninjutsu" />
-        <label for="skillNin">Ninjutsu</label>
+          <input type="checkbox" id="skillNin" name="skills" value="Ninjutsu" />
+          <label for="skillNin">Ninjutsu</label>
 
-        <span class="error-message"></span>
-      </fieldset>
+          <span class="error-message"></span>
+        </fieldset>
 
-      <fieldset>
-        <legend>Ninja originally from</legend>
-        <select id="origin" name="origin">
-          <option value="guess">
-            You must guess it!!! btw I think it's easy!!
-          </option>
-          <option value="Japan">Japan</option>
-          <option value="China">China</option>
-          <option value="Korea">Korea</option>
-        </select>
-        <span class="error-message"></span>
-      </fieldset>
+        <fieldset>
+          <legend>Ninja originally from</legend>
+          <label for="origin">Where do you think ninjas came from?</label>
+          <select id="origin" name="origin">
+            <option value="guess">
+              You must guess it!!! btw I think it's easy!!
+            </option>
+            <option value="Japan">Japan</option>
+            <option value="China">China</option>
+            <option value="Korea">Korea</option>
+          </select>
+          <span class="error-message"></span>
+        </fieldset>
 
-      <fieldset>
-        <legend>Your email</legend>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Enter your email"
-        />
-        <span class="error-message"></span>
-      </fieldset>
+        <fieldset>
+          <legend>Your email</legend>
+          <label for="email">Enter your email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+          <span class="error-message"></span>
+        </fieldset>
 
-      <fieldset>
-        <legend>Today's date</legend>
-        <input type="date" id="fillDate" name="fillDate" />
-        <span class="error-message"></span>
-      </fieldset>
+        <fieldset>
+          <legend>Today's date</legend>
+          <label for="fillDate">Select today's date:</label>
+          <input type="date" id="fillDate" name="fillDate" />
+          <span class="error-message"></span>
+        </fieldset>
 
-      <fieldset>
-        <legend>Say something when you become a Ninja</legend>
-        <textarea
-          id="firstWords"
-          name="firstWords"
-          placeholder="What’s the first thing you want to say to the world?"
-        ></textarea>
-        <span class="error-message"></span>
-      </fieldset>
+        <fieldset>
+          <legend>Say something when you become a Ninja</legend>
+          <label for="firstWords"
+            >What’s the first thing you want to say to the world?</label
+          >
+          <textarea
+            id="firstWords"
+            name="firstWords"
+            placeholder="You're a Ninja right now, say hello to the world!!!"
+          ></textarea>
+          <span class="error-message"></span>
+        </fieldset>
 
-      <div>
-        <input type="submit" value="Submit" />
-      </div>
-    </form>
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <p>Ninja Survey</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

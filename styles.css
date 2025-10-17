@@ -48,8 +48,8 @@ input[type="checkbox"] {
 }
 
 input[type="submit"] {
-  background-color: blue;
-  color: white;
+  background-color: darkblue;
+  color: #fff;
   border: none;
   padding: 8px;
   width: 100%;
@@ -57,8 +57,14 @@ input[type="submit"] {
 }
 
 .error-message {
-  color: red;
+  color: darkred;
   font-size: 0.9em;
   margin-top: 3px;
   display: block;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.85em;
 }
