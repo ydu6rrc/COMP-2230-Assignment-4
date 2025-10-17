@@ -3,7 +3,7 @@ const form = document.getElementById("ninjaForm");
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const errorMessages = document.querySelectorAll(".error-message");
-  for (const el of errorMessages) el.textContent = "";
+  for (const error of errorMessages) error.textContent = "";
 
   if (validateForm()) {
     form.submit();
@@ -45,9 +45,16 @@ function validateForm() {
   const userName = document.getElementById("userName");
   const email = document.getElementById("email");
   const origin = document.getElementById("origin");
+  const fillDate = document.getElementById("fillDate");
+  const firstWords = document.getElementById("firstWords");
+  const skills = document.getElementsByName("skills");
 
+  const lettersOnly = /^[A-Za-z]+$/;
   if (!isNotEmpty(userName.value)) {
-    showInputError(userName, "Pls write down your name");
+    showInputError(userName, "Name error");
+    isValid = false;
+  } else if (!lettersOnly.test(userName.value)) {
+    showInputError(userName, "Name must not has number and not be empty.");
     isValid = false;
   }
 
@@ -57,17 +64,33 @@ function validateForm() {
     isValid = false;
   }
 
+  let skillChecked = false;
+  for (let i = 0; i < skills.length; i++) {
+    if (skills[i].checked) skillChecked = true;
+  }
+  if (!skillChecked) {
+    showInputError(skills[0], "Please select at least one skill");
+    isValid = false;
+  }
+
   if (!isSelected(origin)) {
     showInputError(origin, "Just guess the Ninja origin");
     isValid = false;
   }
 
   const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-  if (!isNotEmpty(email.value)) {
-    showInputError(email, "Email cannot be empty");
-    isValid = false;
-  } else if (!emailPattern.test(email.value)) {
+  if (!emailPattern.test(email.value)) {
     showInputError(email, "Enter a valid email address");
+    isValid = false;
+  }
+
+  if (fillDate.value === "") {
+    showInputError(fillDate, "Please select a date");
+    isValid = false;
+  }
+
+  if (firstWords.value.trim() === "") {
+    showInputError(firstWords, "Please write something");
     isValid = false;
   }
 

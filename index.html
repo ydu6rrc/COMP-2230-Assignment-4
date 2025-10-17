@@ -8,40 +8,45 @@
   </head>
   <body>
     <form id="ninjaForm" action="https://httpbin.org/post" method="post">
-      <h1>Do You Believe Ninja Exist?</h1>
+      <h1>Do You Believe Ninjas Exist?</h1>
 
       <fieldset>
-        <label for="userName">Your Name:</label>
-        <input type="text" id="userName" name="userName" />
+        <legend>Your name</legend>
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          placeholder="Enter your name"
+        />
         <span class="error-message"></span>
       </fieldset>
 
       <fieldset>
-        <p><strong>Do you believe ninja exist?</strong></p>
-        <label><input type="radio" name="ninjaExist" value="Yes" /> Yes</label>
-        <label><input type="radio" name="ninjaExist" value="No" /> No</label>
+        <legend>Do you believe ninjas exist?</legend>
+        <input type="radio" id="ninjaYes" name="ninjaExist" value="Yes" />
+        <label for="ninjaYes">Yes</label>
+
+        <input type="radio" id="ninjaNo" name="ninjaExist" value="No" />
+        <label for="ninjaNo">No</label>
+
         <span class="error-message"></span>
       </fieldset>
 
       <fieldset>
-        <p>
-          <strong
-            >What skills do you think are important for being a Ninja?</strong
-          >
-        </p>
-        <label
-          ><input type="checkbox" name="skills" value="Genjutsu" />
-          Genjutsu</label
-        >
-        <label
-          ><input type="checkbox" name="skills" value="Ninjutsu" />
-          Ninjutsu</label
-        >
+        <legend>
+          What skills do you think are important for being a Ninja?
+        </legend>
+        <input type="checkbox" id="skillGen" name="skills" value="Genjutsu" />
+        <label for="skillGen">Genjutsu</label>
+
+        <input type="checkbox" id="skillNin" name="skills" value="Ninjutsu" />
+        <label for="skillNin">Ninjutsu</label>
+
         <span class="error-message"></span>
       </fieldset>
 
       <fieldset>
-        <label for="origin">Where do you think ninjas came from?</label>
+        <legend>Ninja originally from</legend>
         <select id="origin" name="origin">
           <option value="guess">
             You must guess it!!! btw I think it's easy!!
@@ -54,23 +59,29 @@
       </fieldset>
 
       <fieldset>
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" />
+        <legend>Your email</legend>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+        />
         <span class="error-message"></span>
       </fieldset>
 
       <fieldset>
-        <label for="fillDate">The date you are filling this form:</label>
+        <legend>Today's date</legend>
         <input type="date" id="fillDate" name="fillDate" />
         <span class="error-message"></span>
       </fieldset>
 
       <fieldset>
-        <label for="firstWords"
-          >If you became a Ninja, what’s the first thing you want to say to the
-          world?</label
-        >
-        <textarea id="firstWords" name="firstWords"></textarea>
+        <legend>Say something when you become a Ninja</legend>
+        <textarea
+          id="firstWords"
+          name="firstWords"
+          placeholder="What’s the first thing you want to say to the world?"
+        ></textarea>
         <span class="error-message"></span>
       </fieldset>
 
